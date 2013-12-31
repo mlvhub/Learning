@@ -1,0 +1,22 @@
+package controllers
+
+import play.api.mvc.Controller
+import scala.collection.mutable._
+import models.User
+import play.api.data.Form
+import play.api.data.Mapping
+import play.api.data.Mapping
+
+object Users extends Controller{
+  
+  val users: Map[String, User] = new HashMap
+
+  def add = TODO
+  def save = TODO
+  
+  val form = Form(
+    Mapping(
+      "username" -> text,
+      "email" -> text)(User.apply)(User.unapply))
+  
+}
