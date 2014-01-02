@@ -5,9 +5,8 @@
 
 @main("Edit User") {
   <h1>Edit User</h1>
-  @form(routes.Users.update(userForm.get.id)) {
-      @inputText(userForm("username"))
-      @inputText(userForm("email"))
+  @form(routes.Users.update(userForm.get.id.get)) {
+      @formFields(userForm)
       <button type="submit">Update</button>
   }
 }

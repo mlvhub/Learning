@@ -1,2 +1,15 @@
 eclipse.preferences.version=1
 org.scala-ide.sdt.core.diagnostic.currentPluginVersion=3.0.2.v-2_10-201310181157-0880865
+syntaxColouring.bracket.colour=37,101,37
+syntaxColouring.character.colour=63,127,95
+syntaxColouring.default.colour=22,127,159
+syntaxColouring.keyword.colour=96,163,143
+syntaxColouring.multiLineString.colour=63,127,95
+syntaxColouring.numberLiteral.colour=32,120,120
+syntaxColouring.operator.colour=104,194,104
+syntaxColouring.return.colour=96,163,143
+syntaxColouring.semantic.annotation.colour=37,92,146
+syntaxColouring.semantic.lazyTemplateVal.colour=62,136,94
+syntaxColouring.semantic.methodParam.colour=101,176,9
+syntaxColouring.semantic.templateVal.colour=0,0,124
+syntaxColouring.string.colour=63,127,95
