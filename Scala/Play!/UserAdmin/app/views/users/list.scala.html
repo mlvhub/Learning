@@ -11,7 +11,7 @@
       <ul>
       @for(user <- users) {
               <li>@user.username @user.email
-              <a href="@routes.Users.edit(user.id)">Edit</a>
+              <a href="@routes.Users.edit(user.id.get)">Edit</a>
               @helper.form(routes.Users.delete(user.id.get)){<button type="submit">Delete</button>}</li>
       }
       </ul>

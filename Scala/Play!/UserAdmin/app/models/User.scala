@@ -5,12 +5,12 @@ import anorm.SqlParser._
 import play.api.db.DB
 import play.api.Play.current
 
-case class User(id: Pk[Int], username: String, email: String, age: Int) {
-  
+case class User(id: Pk[Int] = NotAssigned, username: String, email: String, age: Int) {
+  def department = email.substring(email.indexOf("@") + 1).split("\\.").head
 }
 
 object User {
-  
+
   def list = {
     DB.withConnection { implicit connection =>
       SQL("SELECT * from User").as(userParser *)
@@ -28,7 +28,7 @@ object User {
         'age -> user.age).executeUpdate
     }
   }
-  
+
   def update(id: Int, user: User) {
     DB.withConnection { implicit connection =>
       SQL(""" 
@@ -38,24 +38,22 @@ object User {
             age = {age}
             WHERE id = {id}
       """).on(
-          'id -> id,
-          'username -> user.username,
-          'email -> user.email,
-          'age -> user.age
-      ).executeUpdate
+        'id -> id,
+        'username -> user.username,
+        'email -> user.email,
+        'age -> user.age).executeUpdate
     }
   }
-  
+
   def delete(id: Int) {
     DB.withConnection { implicit connection =>
       SQL(""" 
           DELETE FROM User where id = {id}
       """).on(
-          'id -> id
-      ).executeUpdate
+        'id -> id).executeUpdate
     }
   }
-  
+
   def load(id: Int): Option[User] = {
     DB.withConnection { implicit connection =>
       SQL("SELECT * from User WHERE id = {id}")
@@ -63,7 +61,7 @@ object User {
         .as(userParser.singleOpt)
     }
   }
-  
+
   private val userParser: RowParser[User] = {
     get[Pk[Int]]("id") ~
       get[String]("username") ~
