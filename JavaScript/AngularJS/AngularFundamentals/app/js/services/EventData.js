@@ -1,27 +1,28 @@
 'use strict';
 
+
 eventsApp.factory('eventData', function ($resource, $q) {
-    var resource = $resource('geturl/:id', {
-        id: '@id'
-    });
+    var resource = $resource('data/:id', {id: '@id'});
 
     return {
         getEvent: function () {
+            return resource.get({ id: 1 });
+            /*
             // Promise
             var deferred = $q.defer(),
                 success = function (event) {
                     deferred.resolve(event);
+                    console.log(event);
                 },
                 failure = function (response) {
                     deferred.reject(response);
+                    console.log(response);
                 };
 
-
-            resource.get({
-                id: 1
-            }, success, failure);
+            resource.get({id: 1}, success, failure);
 
             return deferred.promise;
+            */
         },
         save: function (event) {
             var deferred = $q.defer();
@@ -37,9 +38,16 @@ eventsApp.factory('eventData', function ($resource, $q) {
         }
     };
 });
+
+
 /*
-{
-        getEvent: function() {
+eventsApp.factory('eventData', function ($resource, $q) {
+    var resource = $resource('geturl/:id', {
+        id: '@id'
+    });
+
+    return {
+        getEvent: function () {
             name: 'Angular Course',
             date: '01/01/2013',
             time: '10:30 a.m.',
@@ -77,4 +85,5 @@ eventsApp.factory('eventData', function ($resource, $q) {
             ]
         }
     };
-    */
+});
+*/

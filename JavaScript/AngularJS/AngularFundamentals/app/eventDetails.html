@@ -21,27 +21,18 @@
             </div>
             <div ng-controller="EventController">
                 <img ng-src="{{event.imageUrl}}" alt="{{event.name}}">
+                <button type="button" class="btn btn-primary" ng-click="scrollToSession()">Scroll</button>
+                
                 <div class="row">
                     <div class="span11">
                         <h2 ng-style="myStyle" ng-bind="event.name | uppercase"></h2>
                     </div>
                 </div>
                 
-                <button class="btn" ng-disabled="buttonDisabled">Disabled</button>
-                
-                <div ng-non-bindable>{{ 1+ 2 }}</div>
-                
-                <div ng-bind-html-unsafe="snippet">some title</div>
-                <div ng-bind-html="snippet">some title</div>
-                
-                <h2 ng-show="boolValue">Show This</h2>
-                <h2 ng-hide="boolValue">Hide This</h2>
-                
                 <div class="row">
                     <div class="span3">
                         <div><strong>Date:</strong> {{event.date}}</div>
                         <div><strong>Time:</strong> {{event.time}}</div>
-                        <div><strong>Price:</strong> {{34 | currency}}</div>
                     </div>
                     <div class="span4">
                         <address>
@@ -51,8 +42,6 @@
                         </address>
                     </div>
                 </div>
-                
-                <div>{{ 3.1 | number:2}}</div>
                 
                 <hr>
             
@@ -70,7 +59,7 @@
                     <option value="advanced">Advanced</option>
                 </select>
                 <ul class="thumbnails">
-                    <li ng-repeat="session in event.sessions | orderBy:sortorder | limitTo:3 | filter:query">
+                    <li ng-repeat="session in event.sessions | orderBy:sortorder | limitTo:3 | filter:query" class="span11" id="session{{session.id}}">
                         <div class="row session"></div>
                         <div class="span0 well votingWidget">
                             <div class="votingButton" ng-click="upVoteSession(session)">
@@ -103,7 +92,6 @@
         <script src="js/filters.js"></script>
         <script src="js/services/EventData.js"></script>
         <script src="js/controllers/EventController.js"></script>
-        <script src="lib/angular/angular-sanitize.min.js"></script>
         
     </body>
 </html>

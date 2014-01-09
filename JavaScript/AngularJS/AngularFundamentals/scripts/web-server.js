@@ -93,14 +93,31 @@ StaticServlet.prototype.handleRequest = function(req, res) {
   var parts = path.split('/');
   if (parts[parts.length-1].charAt(0) === '.')
     return self.sendForbidden_(req, res, path);
-  fs.stat(path, function(err, stat) {
-    if (err)
-      return self.sendMissing_(req, res, path);
+  return trySendFile(self, path, req ,res);
+};
+
+var trySendFile = function (servlet, path, req, res) {
+    var dataExtension = "json";
+    fs.stat(path, function(err, stat) {
+        console.log();
+      console.log(path.indexOf(dataExtension));
+        console.log();
+    if (err) {
+        if(path.indexOf(dataExtension) != -1)
+            return servlet.sendMissing_(req, res, path);
+        else
+            return trySendFile(servlet, assignExtension(path, dataExtension), req, res);
+    }
     if (stat.isDirectory())
-      return self.sendDirectory_(req, res, path);
-    return self.sendFile_(req, res, path);
+      return servlet.sendDirectory_(req, res, path);
+    return servlet.sendFile_(req, res, path);
   });
-}
+};
+
+var assignExtension = function (path, extension) {
+    // Should be smarter than this
+    return path + "." + extension; 
+};
 
 StaticServlet.prototype.sendError_ = function(req, res, error) {
   res.writeHead(500, {

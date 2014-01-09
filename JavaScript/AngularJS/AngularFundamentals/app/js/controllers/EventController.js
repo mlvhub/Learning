@@ -1,18 +1,19 @@
 'use strict';
 
-eventsApp.controller('EventController', function EventController($scope, eventData) {
-    $scope.snippet = "<span style='color:red'>hi there</span>";
-    $scope.boolValue = false;
-    $scope.myStyle = { color: 'red' };
-    $scope.myClass = 'blue';
-    $scope.buttonDisabled = true;
+eventsApp.controller('EventController', function EventController($scope, $anchorScroll, eventData) {
     $scope.sortorder = 'name';
     
-    $scope.event = eventData.event;
+    $scope.event = eventData.getEvent();
+    /*
     $scope.event.then(
         function (event) { console.log(event); },
         function (response) { console.log(response); } 
     );
+    */
+    
+    $scope.scrollToSession = function () {
+      $anchorScroll();  
+    };
     
     $scope.upVoteSession = function (session) {
         session.upVoteCount++;
