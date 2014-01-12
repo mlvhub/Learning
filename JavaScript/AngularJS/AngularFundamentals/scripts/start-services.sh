@@ -1,4 +1,4 @@
 tty.js &
 brackets &
-cd ..
+pwd
 node scripts/web-server.js
