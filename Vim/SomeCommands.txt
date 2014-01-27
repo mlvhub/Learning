@@ -1,0 +1,27 @@
+diw:	delete - inner - word
+daw:	delete word and space after it
+
+viw:	visual - inner - word 
+vaw:	selects space after word
+
+viW:	a WORD is delimited by a space
+vaW:	WORD with space after it
+
+yiW:	copies current word 
+yaW: 	copies current WORD
+
+vip:	selects current paragraph
+vap:	selects current paragraph and the line after it
+
+gUis:	makes the current sentence uppcase
+
+das: 	delete around sentence and space after it
+
+vit:	selects everything inside a tag (html, xml, etc)
+vat:	selects entire tag
+vi(:	selects everything inside (
+va(:	selects eveything including ()
+
+cit:	deletes everything inside a tag, and enters insert mode (change - inner - tag)
+ci(:	deletes everything inside (, and enters insert mode (also cib)
+ci{:	deletes everything inside {, and enters insert mode (also ciB)
