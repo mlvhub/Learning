@@ -12,5 +12,12 @@ class CalculatorTest extends PHPUnit_Framework_TestCase
 		$expected = 11;
 		$this->assertEquals($expected, $sum);		
 	}
+  
+  public function testSixPlusEightEqualsFourteen()
+  {
+    $sum = Calculator::sum(6, 8);
+    $expected = 14;
+		$this->assertEquals($expected, $sum);		
+  }
 
 } 
