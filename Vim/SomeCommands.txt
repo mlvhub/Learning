@@ -13,9 +13,10 @@ yaW: 	copies current WORD
 vip:	selects current paragraph
 vap:	selects current paragraph and the line after it
 
-gUis:	makes the current sentence uppcase
+gUis: makes the current sentence uppcase
+guiw: makes the current word lowercase
 
-das: 	delete around sentence and space after it
+das:  delete around sentence and space after it
 
 vit:	selects everything inside a tag (html, xml, etc)
 vat:	selects entire tag
