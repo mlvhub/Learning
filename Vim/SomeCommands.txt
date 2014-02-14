@@ -15,6 +15,7 @@ vap:	selects current paragraph and the line after it
 
 gUis: makes the current sentence uppcase
 guiw: makes the current word lowercase
+guu:  makes the current line lowercase
 
 das:  delete around sentence and space after it
 
