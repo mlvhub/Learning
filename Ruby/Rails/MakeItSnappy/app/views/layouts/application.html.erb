@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MakeItSnappy</title>
+<title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div id="container">
+  <div id="header">
+    <%= link_to 'Make It Snappy Q&A', root_path  %>
+  </div>
+  <div id="nav">
+    <ul>
+      <li>
+        <%= link_to 'Home', root_path  %>
+      </li>
+    </ul>
+  </div>
+  <div id="content">
+    <% flash.each do |key, value| %>
+      <p id="flash"> <%= value  %>  </p>
+    <% end  %>
+    <%= yield %>
+  </div>
+  <div id="footer">
+    &copy; Make It Snappy Q&A <%= Date.today.year  %>
+  </div>
+</div>
 
 </body>
 </html>
