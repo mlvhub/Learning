@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :quetions
   has_secure_password
 
   validates :username, presence: true, uniqueness: { case_sensitive: false },
