@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140331052215) do
   create_table "questions", force: true do |t|
     t.integer  "user_id"
     t.string   "body"
-    t.boolean  "solved"
+    t.boolean  "solved",     default: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
