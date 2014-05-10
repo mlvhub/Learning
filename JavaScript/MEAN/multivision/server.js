@@ -12,7 +12,7 @@ function compile(str, path) {
 
 app.set('views', __dirname + '/server/views');
 app.set('view engine', 'jade');
-app.use(logger);
+app.use(logger());
 app.use(stylus.middleware(
       {
         src: __dirname + '/public',
@@ -21,6 +21,10 @@ app.use(stylus.middleware(
 ));
 
 app.use(express.static(__dirname + '/public'));
+
+app.get('/partials/:partialPath', function (req, res) {
+  res.render('partials/' + req.params.partialPath);
+});
 
 app.get('*', function(req, res) {
   res.render('index');
