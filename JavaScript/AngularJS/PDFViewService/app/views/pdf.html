@@ -1,0 +1,10 @@
+<button ng-click="prev()">Prev</button>
+<button ng-click="next()">Next</button>
+<input ng-model="pdf.currentPage"></input>
+<div ng-controller="BookmarkCtrl">
+  <button ng-click="createBookmark(pdf.src, pdf.currentPage)">Bookmark</button>
+  <ul>
+    <li ng-repeat="bookmark in bookmarks" ng-click="pdf.goTo(bookmark.page)">{{bookmark.url}} - {{bookmark.page}} <button ng-click="deleteBookmark(bookmark.id)">X</button> </li>
+  </ul>
+</div> 
+<pdf-view src="{{pdf.src}}" current-page="{{pdf.currentPage}}"></pdf-view>
