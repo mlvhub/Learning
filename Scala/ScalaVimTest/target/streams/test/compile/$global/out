@@ -3,18 +3,18 @@
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
 [0m[[0mdebug[0m] [0m	modified: Set(/home/mlopez/Development/Learning/Scala/ScalaVimTest/src/test/scala/org/mlopez/ListSpec.scala)[0m
-[0m[[0mdebug[0m] [0mRemoved products: Set(/home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes/org/mlopez/ListSpec$$anonfun$1$$anonfun$apply$mcV$sp$1.class, /home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes/org/mlopez/ListSpec.class, /home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes/org/mlopez/ListSpec$$anonfun$1.class, /home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes/org/mlopez/ListSpec$$anonfun$1$$anonfun$apply$mcV$sp$5$$anonfun$apply$mcV$sp$6.class, /home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes/org/mlopez/ListSpec$$anonfun$1$$anonfun$apply$mcV$sp$3.class, /home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes/org/mlopez/ListSpec$$anonfun$1$$anonfun$apply$mcV$sp$5.class, /home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes/org/mlopez/ListSpec$$anonfun$1$$anonfun$apply$mcV$sp$2.class, /home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes/org/mlopez/ListSpec$$anonfun$1$$anonfun$apply$mcV$sp$3$$anonfun$apply$mcV$sp$4.class)[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
 [0m[[0mdebug[0m] [0mModified external sources: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
 [0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/mlopez/Development/Learning/Scala/ScalaVimTest/src/test/scala/org/mlopez/ListSpec.scala)[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
-[0m[[0mdebug[0m] [0m	product: Set(/home/mlopez/Development/Learning/Scala/ScalaVimTest/src/test/scala/org/mlopez/ListSpec.scala)[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
 [0m[[0mdebug[0m] [0m	binary dep: Set()[0m
 [0m[[0mdebug[0m] [0m	external source: Set()[0m
 [0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/mlopez/Development/Learning/Scala/ScalaVimTest/src/test/scala/org/mlopez/ListSpec.scala)[0m
 [0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes...[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 1820002a, interfacing (CompilerInterface) with Scala compiler version 2.10.3[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler dc497c8, interfacing (CompilerInterface) with Scala compiler version 2.10.3[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-d[0m
 [0m[[0mdebug[0m] [0m	/home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes[0m
@@ -22,7 +22,7 @@
 [0m[[0mdebug[0m] [0m	/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/netx.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/plugin.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-7-openjdk-amd64/jre/classes:/home/mlopez/.sbt/boot/scala-2.10.3/lib/scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	/home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/test-classes:/home/mlopez/Development/Learning/Scala/ScalaVimTest/target/scala-2.10/classes:/home/mlopez/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.3.jar:/home/mlopez/.ivy2/cache/org.scalatest/scalatest_2.10/jars/scalatest_2.10-2.0.jar[0m
-[0m[[0mdebug[0m] [0mScala compilation took 1.500753389 s[0m
+[0m[[0mdebug[0m] [0mScala compilation took 2.103851699 s[0m
 [0m[[0mdebug[0m] [0mStep 2 changed sources and immdediate dependencies:[0m
 [0m[[0mdebug[0m] [0m	Set(/home/mlopez/Development/Learning/Scala/ScalaVimTest/src/test/scala/org/mlopez/ListSpec.scala)[0m
 [0m[[0mdebug[0m] [0mNon-trivial strongly connected components: [0m

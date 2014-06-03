@@ -21,5 +21,15 @@ class ListSpec extends WordSpec with Matchers {
       list1 map { x => x + 1 } should be (List(2, 4, 6, 8))
     }
 
+    "Pack properly" in {
+      val list = List("a", "a", "b", "b", "c", "a")
+      ListHelper pack list should be (List(List("a", "a"), List("b", "b"), List("c"), List("a")))
+    }
+
+    "Enconde properly" in {
+      val list = List("a", "a", "b", "b", "c", "a")
+      ListHelper encode list should be (List(("a",2), ("b", 2), ("c", 1), ("a", 1)))
+    }
+
   }
 }

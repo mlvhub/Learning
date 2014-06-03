@@ -12,5 +12,3 @@ libraryDependencies ++= Seq(
   cache,
   ws
 )
-
-com.jamesward.play.BrowserNotifierPlugin.livereload

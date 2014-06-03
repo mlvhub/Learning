@@ -1,7 +1,9 @@
-@(message: String)
+@(contacts: List[models.Contact])
 
-@main("Welcome to Play") {
-
-    @play20.welcome(message)
-
+@main("Hello") {
+  <ul>
+    @contacts.map { contact => 
+      <li>@contact.name - @contact.emailAddress</li>
+    }
+  </ul>
 }

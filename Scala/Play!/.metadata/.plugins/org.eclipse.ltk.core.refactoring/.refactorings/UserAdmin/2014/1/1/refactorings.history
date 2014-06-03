@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Move element &apos;1.sql&apos; to &apos;default&apos;&#x0A;- Original project: &apos;UserAdmin&apos;&#x0A;- Destination element: &apos;default&apos;&#x0A;- Original element: &apos;1.sql&apos;&#x0A;- Update references to refactored element" description="Move file" element1="conf/evolutions/1.sql" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1388643731589" target="conf/evolutions/default" units="0" version="1.0"/>
-</session>
