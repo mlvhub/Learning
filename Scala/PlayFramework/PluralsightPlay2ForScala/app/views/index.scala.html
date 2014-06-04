@@ -1,6 +1,16 @@
-@(contacts: List[models.Contact])
+@(contacts: List[models.Contact], contact: Form[models.Contact])
 
 @main("Hello") {
+
+  <h2>New Contact</h2>
+
+  @helper.form(action = routes.Contacts.create) {
+    @helper.inputText(contact("name"))
+    @helper.inputText(contact("emailAddress"))
+
+    <input type="submit" value="Create">
+  }
+
   <ul>
     @contacts.map { contact => 
       <li>@contact.name - @contact.emailAddress</li>
