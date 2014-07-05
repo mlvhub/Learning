@@ -1,2 +1,5 @@
-alert "Hello world!"
-alert "Hello 2"
+class Coin extends Phaser.Sprite
+  @key = 'coin'
+
+coin = new Coin
+console.log coin
