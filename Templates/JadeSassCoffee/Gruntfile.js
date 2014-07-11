@@ -13,7 +13,10 @@ module.exports = function(grunt) {
       scripts: 'scripts',
       styles: 'styles',
       templates: 'templates',
-      dist: 'dist'
+      dist: 'dist',
+      test: 'test',
+      src: 'src',
+      specs: 'specs'
     },
 
     watch: {
@@ -22,8 +25,11 @@ module.exports = function(grunt) {
         tasks: ['jade']
       },
       coffee: {
-        files: ['<%= yeoman.app %>/<%= yeoman.scripts %>/**/*.coffee'],
-        tasks: ['coffee']
+        files: [
+          '<%= yeoman.app %>/<%= yeoman.scripts %>/**/*.coffee',
+          '<%= yeoman.test %>/<%= yeoman.src %>/**/*.coffee'
+        ],
+        tasks: ['coffee', 'jasmine']
       },
       compass: {
         files: ['<%= yeoman.app %>/<%= yeoman.styles %>/**/*.scss'],
@@ -82,11 +88,18 @@ module.exports = function(grunt) {
     },
 
     coffee: {
-      glob_to_multiple: {
+      scripts: {
         expand: true,
         cwd: '<%= yeoman.app %>/',
         src: ['<%= yeoman.scripts %>/**/*.coffee'],
         dest: '<%= yeoman.app %>/<%= yeoman.dist %>/',
+        ext: '.js'
+      },
+      specs: {
+        expand: true,
+        cwd: '<%= yeoman.test %>/<%= yeoman.src %>/',
+        src: ['**/*.coffee'],
+        dest: '<%= yeoman.test %>/<%= yeoman.specs %>/',
         ext: '.js'
       }
     },
@@ -125,6 +138,18 @@ module.exports = function(grunt) {
         'coffee',
         'jade',
       ]
+    },
+
+    jasmine: {
+      tests: {
+        src: '<%= yeoman.app %>/<%= yeoman.dist %>/<%= yeoman.scripts %>/**/*.js',
+        options: {
+          specs: '<%= yeoman.test %>/<%= yeoman.specs %>/**/*.js',
+          vendor: [
+            'bower_components/requirejs/require.js'
+          ]
+        }
+      }
     }
 
   });
@@ -137,7 +162,8 @@ module.exports = function(grunt) {
     grunt.task.run([
       'concurrent:server',
       'connect:livereload',
-      'watch'
+      'watch',
+      'jasmine'
     ]);
   });
 

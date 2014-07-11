@@ -1,5 +1,6 @@
-class Coin extends Phaser.Sprite
-  @key = 'coin'
+require.config(
+  baseUrl: 'dist/scripts'
 
-coin = new Coin
-console.log coin
+  paths:
+    specs: 'test/specs'
+)
