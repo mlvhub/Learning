@@ -1,5 +1,5 @@
 (function() {
-  define(['Calculator'], function(Calculator) {
+  define(['calculator'], function(Calculator) {
     return describe("Calculator", function() {
       var calc;
       calc = {};

@@ -1,4 +1,4 @@
-define ['Calculator'], (Calculator) ->
+define ['calculator'], (Calculator) ->
 
   describe "Calculator", ->
 

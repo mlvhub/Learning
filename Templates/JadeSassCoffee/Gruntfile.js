@@ -29,7 +29,7 @@ module.exports = function(grunt) {
           '<%= yeoman.app %>/<%= yeoman.scripts %>/**/*.coffee',
           '<%= yeoman.test %>/<%= yeoman.src %>/**/*.coffee'
         ],
-        tasks: ['coffee', 'jasmine']
+        tasks: ['coffee']
       },
       compass: {
         files: ['<%= yeoman.app %>/<%= yeoman.styles %>/**/*.scss'],
@@ -162,8 +162,7 @@ module.exports = function(grunt) {
     grunt.task.run([
       'concurrent:server',
       'connect:livereload',
-      'watch',
-      'jasmine'
+      'watch'
     ]);
   });
 

@@ -5,7 +5,7 @@
   "authors": [
     "Miguel <miguellova@gmail.com>"
   ],
-  "description": "Template to use with Haml, Sass and Coffeescript",
+  "description": "Template to use with Jade, Sass and Coffeescript",
   "license": "MIT",
   "private": true,
   "ignore": [
@@ -16,7 +16,6 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.19",
     "requirejs": "~2.1.14"
   }
 }
