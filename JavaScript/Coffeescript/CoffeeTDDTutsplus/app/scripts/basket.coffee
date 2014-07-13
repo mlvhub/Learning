@@ -1,9 +1,20 @@
-define [], ->
+define ['lodash'], (_) ->
 
   class Basket
-    items: []
-    count: 0
+    constructor: ->
+      @items = []
+      @totalCount = 0
+      @distinctCount = 0
     
     add: (item) ->
-      @items.push item
-      @count++
+      itemInBasket = _.find @items, (basketItem) -> 
+        basketItem.item.id is item.id
+      if itemInBasket
+        itemInBasket.quantity++
+      else
+        @items.push
+          item: item
+          quantity: 1
+      
+      @distinctCount = @items.length
+      @totalCount++

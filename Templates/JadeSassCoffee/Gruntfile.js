@@ -22,18 +22,18 @@ module.exports = function(grunt) {
     watch: {
       jade: {
         files: ['<%= yeoman.app %>/**/*.jade'],
-        tasks: ['jade']
+        tasks: ['clean', 'jade']
       },
       coffee: {
         files: [
           '<%= yeoman.app %>/<%= yeoman.scripts %>/**/*.coffee',
           '<%= yeoman.test %>/<%= yeoman.src %>/**/*.coffee'
         ],
-        tasks: ['coffee']
+        tasks: ['clean', 'coffee']
       },
       compass: {
         files: ['<%= yeoman.app %>/<%= yeoman.styles %>/**/*.scss'],
-        tasks: ['compass:server'],
+        tasks: ['clean', 'compass:server'],
       },
       gruntFile: {
         files: ['Gruntfile.js']
@@ -140,6 +140,15 @@ module.exports = function(grunt) {
       ]
     },
 
+    clean: ['<%= yeoman.app %>/<%= yeoman.dist %>', '<%= yeoman.test %>/<%= yeoman.specs %>'],
+
+    karma: {
+      unit: {
+        configFile: 'karma.conf.js',
+        background: true
+      }
+    },
+
     jasmine: {
       tests: {
         src: '<%= yeoman.app %>/<%= yeoman.dist %>/<%= yeoman.scripts %>/**/*.js',
@@ -160,6 +169,7 @@ module.exports = function(grunt) {
     }
 
     grunt.task.run([
+      'clean',
       'concurrent:server',
       'connect:livereload',
       'watch'

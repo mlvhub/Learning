@@ -1,6 +1,9 @@
 (function() {
   require.config({
-    baseUrl: 'dist/scripts'
+    baseUrl: 'dist/scripts',
+    paths: {
+      lodash: '../../bower_components/lodash/dist/lodash.min.js'
+    }
   });
 
 }).call(this);

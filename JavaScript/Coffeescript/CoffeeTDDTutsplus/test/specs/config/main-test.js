@@ -16,6 +16,9 @@
 
   requirejs.config({
     baseUrl: '/base/app/dist/scripts',
+    paths: {
+      lodash: '../../../bower_components/lodash/dist/lodash.min'
+    },
     deps: tests,
     callback: window.__karma__.start
   });
