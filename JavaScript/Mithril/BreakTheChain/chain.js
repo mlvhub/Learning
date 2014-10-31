@@ -1,5 +1,7 @@
+// module
 var chain = {};
 
+// helpers functions
 chain.seven = function(subject) {
   var output = [];
   for (var i = 0; i < 7; i++) output.push(subject(i));
@@ -11,12 +13,20 @@ chain.checks = function(ctrl, index) {
     onclick: function() {
       ctrl.check(index, this.checked);
     },
-      checked: ctrl.isChecked(index)
+    checked: ctrl.isChecked(index)
   };
 };
 chain.indexAt = function(x, y) {
   var daysPerWeek = 7;
   return y * daysPerWeek + x;
+};
+
+chain.highlights = function(index) {
+  return {
+    style: {
+      background: chain.dateAt(index).getTime() == chain.today().getTime() ? "silver" : ""
+    }
+  };
 };
 
 // model
@@ -62,11 +72,12 @@ chain.controller = function() {
 
 // view
 chain.view = function(ctrl) {
-  return m('table', chain.seven(function(){
-    return m('tr', chain.seven(function() {
-      return m('td', [
-        m('input[type=checkbox]')
-      ]);
+  return m("table", chain.seven(function(y) {
+    return m("tr", chain.seven(function(x) {
+      var index = chain.indexAt(x, y)
+      return m("td", chain.highlights(index), [
+        m("input[type=checkbox]", chain.checks(ctrl, index))
+        ]);
     }));
   }));
 };
