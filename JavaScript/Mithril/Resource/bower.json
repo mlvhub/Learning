@@ -1,0 +1,19 @@
+{
+  "name": "Resource",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mlvhub/Learning",
+  "authors": [
+    "Miguel Lopez V <miguel@firstfactory.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mithril": "~0.1.22"
+  }
+}
