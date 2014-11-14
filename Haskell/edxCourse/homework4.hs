@@ -21,3 +21,14 @@ xs1 = [z | z <- [[(x,y) | y <- [4,5,6]] | x <- [1,2,3]]]
 xs2 = concat [[[(x,y)] | x <- [1,2,3]] | y <- [4,5,6]]
 --xs3 = concat [(x,y) | y <- [4,5,6]] | x <- [1,2,3]
 xs4 = concat [[(x,y) | y <- [4,5,6]] | x <- [1,2,3]]
+
+find k t = [v | (k', v) <- t, k == k']
+
+positions x xs = find x (zip xs [0..n])
+  where n = length xs - 1
+
+riffle2 xs ys = concat [[x, y] | (x, y) <- xs `zip` ys]
+riffle4 xs ys = [x : [y] | x <- xs, y <- ys]
+
+divides n d = n `mod` d == 0
+divisors x = [d | d <- [1..x], x `divides` d]
