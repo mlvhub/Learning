@@ -22,3 +22,7 @@ class Resource
 
   destroy: (id) ->
     @request 'DELETE', @specificUrl(id)
+
+class User extends Resource
+  @constructor: ->
+    super('users')
