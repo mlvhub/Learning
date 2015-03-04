@@ -33,12 +33,6 @@
             android:parentActivityName=".LoginActivity"
             android:screenOrientation="portrait" >
         </activity>
-
-        <service
-            android:name=".RibbitApplication"
-            android:enabled="true"
-            android:exported="true" >
-        </service>
     </application>
 
 </manifest>
