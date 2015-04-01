@@ -1,0 +1,26 @@
+[0m[[0minfo[0m] [0m[32mProblemsSpec:[0m[0m
+[0m[[0minfo[0m] [0m[32m99 problems[0m[0m
+[0m[[0minfo[0m] [0m[32m  last[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should find the last element of a list[0m[0m
+[0m[[0minfo[0m] [0m[32m  penultimate[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should find the penultimate element of a list[0m[0m
+[0m[[0minfo[0m] [0m[32m  nth[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should find the nth element of a list[0m[0m
+[0m[[0minfo[0m] [0m[32m  length[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should calculate the length element of a list[0m[0m
+[0m[[0minfo[0m] [0m[32m  reverse[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return the reverse of a given list[0m[0m
+[0m[[0minfo[0m] [0m[32m  palindrome using the reverse method[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return whether a given list is a palindrome or not[0m[0m
+[0m[[0minfo[0m] [0m[32m  flatten[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return a flattened list from a given list of lists[0m[0m
+[0m[[0minfo[0m] [0m[32m  compress[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return a compressed list from a given list[0m[0m
+[0m[[0minfo[0m] [0m[32m  pack[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return a packed list from a given list[0m[0m
+[0m[[0minfo[0m] [0m[32m  encode[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return a packed list from a given list[0m[0m
+[0m[[0minfo[0m] [0m[32m  duplicate[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return a duplicated list from a given list[0m[0m
+[0m[[0minfo[0m] [0m[32m  split[0m[0m
+[0m[[0minfo[0m] [0m[32m  - should return a split list from a given list[0m[0m
