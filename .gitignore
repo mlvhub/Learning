@@ -1,1 +1,4 @@
 /PHPUnitNetbeansTest/nbproject/private/
+tmp/
+cookbooks/
+.vagrant/
