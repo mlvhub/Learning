@@ -1,0 +1,41 @@
+Elm.Main = Elm.Main || {};
+Elm.Main.make = function (_elm) {
+   "use strict";
+   _elm.Main = _elm.Main || {};
+   if (_elm.Main.values)
+   return _elm.Main.values;
+   var _op = {},
+   _N = Elm.Native,
+   _U = _N.Utils.make(_elm),
+   _L = _N.List.make(_elm),
+   $moduleName = "Main",
+   $Basics = Elm.Basics.make(_elm),
+   $Graphics$Element = Elm.Graphics.Element.make(_elm),
+   $Mouse = Elm.Mouse.make(_elm),
+   $Signal = Elm.Signal.make(_elm);
+   var main = A2($Signal.map,
+   $Graphics$Element.show,
+   $Mouse.position);
+   var relativeMouse = F2(function (_v0,
+   _v1) {
+      return function () {
+         switch (_v1.ctor)
+         {case "_Tuple2":
+            return function () {
+                 switch (_v0.ctor)
+                 {case "_Tuple2":
+                    return {ctor: "_Tuple2"
+                           ,_0: _v1._0 - _v0._0
+                           ,_1: _v1._1 - _v0._1};}
+                 _U.badCase($moduleName,
+                 "on line 6, column 34 to 48");
+              }();}
+         _U.badCase($moduleName,
+         "on line 6, column 34 to 48");
+      }();
+   });
+   _elm.Main.values = {_op: _op
+                      ,relativeMouse: relativeMouse
+                      ,main: main};
+   return _elm.Main.values;
+};
