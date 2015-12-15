@@ -6,3 +6,4 @@ deps/
 _build/
 node_modules/
 *.lock
+*.swp
