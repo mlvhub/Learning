@@ -1,2 +1,0 @@
-defmodule MyApp do
-end
